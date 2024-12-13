@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Food_Menu.Default" %>
+<%@ Register Src="~/Header.ascx" TagName="myhead" TagPrefix="aa" %>
+<%@ Register Src="~/Footer.ascx" TagName="myfoot" TagPrefix="aa" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <aa:myhead id="h1" runat="server"></aa:myhead>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="menu">
+                            <ul class="menu">
+                                <li><a href="Empolyee.aspx"><span>Employee</span></a></li>
+                                <li class="last"><a href="Restraunt.aspx"><span>Resturant</span></a></li>
+
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="height: 330px; vertical-align: top; background-color: lightblue">
+                        <center>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aa:myfoot id="Myhead2" runat="server"></aa:myfoot>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
